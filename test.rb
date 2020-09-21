@@ -1,35 +1,35 @@
-play 44
-play 45
-play 46
-play 47
-play 48
-play 49
+play 44, amp: 0.1
+play 45, amp: 0.1
+play 46, amp: 0.1
+play 47, amp: 0.1
+play 48, amp: 0.1
+play 49, amp: 0.1
 
-play 45
-play :C
+play 45, amp: 0.1
+play :C, amp: 0.1
 
 sleep 0.1
 
-play 70
-play 75
+play 70, amp: 0.1
+play 75, amp: 0.1
 
 sleep 0.001
 
-play 76
-play 77
-play 80
+play 76, amp: 0.1
+play 77, amp: 0.1
+play 80, amp: 0.1
 
 sleep 1
 
-play 81
-play 82
-play 85
-play 90
+play 81, amp: 2
+play 82, amp: 2
+play 85, amp: 2
+play 90, amp: 2
 
-sleep (1)
+sleep 1
 
-play 91
-play 92
+play 91, amp: 0.5
+play 92, amp: 0.5
 
 # live_loop :flibble do
 #   sample :bd_haus, rate: 1

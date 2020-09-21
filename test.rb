@@ -1,35 +1,25 @@
-play 44, amp: 0.1
-play 45, amp: 0.1
-play 46, amp: 0.1
-play 47, amp: 0.1
-play 48, amp: 0.1
-play 49, amp: 0.1
+use_synth :saw
 
-play 45, amp: 0.1
-play :C, amp: 0.1
+4.times do
+  sample :drum_heavy_kick
+  2.times do
+    play 81, amp: 2
+    play 82, amp: 2
+    play 85, amp: 2
+    play 90, amp: 2
+    sample :elec_blip2, rate: 2
+    sleep 0.25
+  end
+  sample :elec_snare
+  4.times do
+    sample :drum_tom_mid_soft
+    sleep 0.125
+  end
+end
 
-sleep 0.1
-
-play 70, amp: 0.1
-play 75, amp: 0.1
-
-sleep 0.001
-
-play 76, amp: 0.1
-play 77, amp: 0.1
-play 80, amp: 0.1
-
-sleep 1
-
-play 81, amp: 2
-play 82, amp: 2
-play 85, amp: 2
-play 90, amp: 2
+use_synth :prophet
 
 sleep 1
-
-play 91, amp: 0.5
-play 92, amp: 0.5
 
 # live_loop :flibble do
 #   sample :bd_haus, rate: 1

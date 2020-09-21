@@ -6,13 +6,32 @@
 #   end
 # end
 
-in_thread do
-  loop do
-    sample :loop_amen, rate: -0.5
-    sample :loop_amen, rate: 0.5
-    sleep sample_duration :loop_amen, rate: -0.5
-  end
-end
+# in_thread do
+#   loop do
+#     sample :loop_amen, rate: -0.5
+#     sample :loop_amen, rate: 0.5
+#     sleep sample_duration :loop_amen, rate: -0.5
+#   end
+# end
+
+# in_thread do
+#   loop do
+#     sample :loop_amen, rate: 0.25, attack: 2
+#     sample :loop_amen, rate: -0.125, attack: 1, attack_level: 1, decay: 0.5, decay_level: 0.5, release: 1, amp: 2
+#     sleep 1
+#   end
+# end
+
+sample :loop_amen, start: 0.5, finish: 0.7, rate: 0.2
+
+sample :drum_cymbal_open
+sleep 2
+
+sample :drum_cymbal_open, attack: 0.01, sustain: 0, release: 0.1, rate: 0.4
+sleep 2
+
+sample :drum_cymbal_open, attack: 0.01, sustain: 0.3, release: 0.1, rate: 1.2
+sleep 2
 
 use_synth :prophet
 

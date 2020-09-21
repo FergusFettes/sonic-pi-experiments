@@ -16,41 +16,43 @@
 
 # in_thread do
 #   loop do
-#     sample :loop_amen, rate: 0.25, attack: 2
+#     # sample :loop_amen, rate: 0.25, attack: 2
 #     sample :loop_amen, rate: -0.125, attack: 1, attack_level: 1, decay: 0.5, decay_level: 0.5, release: 1, amp: 2
+#
+#     sample :loop_amen, start: 0.5, finish: 0.7, rate: 0.2
 #     sleep 1
 #   end
 # end
 
-sample :loop_amen, start: 0.5, finish: 0.7, rate: 0.2
+sample "/home/ffettes/Music/song2.wav", amp: 1
 
-sample :drum_cymbal_open
-sleep 2
+# sample :drum_cymbal_open
+# sleep 2
 
-sample :drum_cymbal_open, attack: 0.01, sustain: 0, release: 0.1, rate: 0.4
-sleep 2
+# sample :drum_cymbal_open, attack: 0.01, sustain: 0, release: 0.1, rate: 0.4
+# sleep 2
 
-sample :drum_cymbal_open, attack: 0.01, sustain: 0.3, release: 0.1, rate: 1.2
-sleep 2
+# sample :drum_cymbal_open, attack: 0.01, sustain: 0.3, release: 0.1, rate: 1.2
+# sleep 2
 
 use_synth :prophet
 
- # in_thread do
- #   loop do
- #     play 65, attack: 0.5, attack_level: 1, decay: 0.5, sustain_level: 0.4, sustain: 2, release: 1, amp: 1
- #     if one_in(5)
- #       play 65, attack: 0.5, sustain: 2, release: 1, amp: 0.4
- #       play 65, attack: 0.5, sustain: 2, release: 1, amp: 0.2
- #     end
- #     if one_in(7)
- #       play 70, attack: 0.5, release: 3
- #       play 72, attack: 0.1, release: 2
- #     end
- #     if one_in(2)
- #       play 73, attack: 4, release: 0.2, amp: 0.4
- #     end
- #     sleep 4
- #   end
+# in_thread do
+#    loop do
+#      play 65, attack: 0.5, attack_level: 1, decay: 0.5, sustain_level: 0.4, sustain: 2, release: 1, amp: 1
+#      if one_in(5)
+#        play 65, attack: 0.5, sustain: 2, release: 1, amp: 0.4
+#        play 65, attack: 0.5, sustain: 2, release: 1, amp: 0.2
+#      end
+#      if one_in(7)
+#        play 70, attack: 0.5, release: 3
+#        play 72, attack: 0.1, release: 2
+#      end
+#      if one_in(2)
+#        play 73, attack: 4, release: 0.2, amp: 0.4
+#      end
+#      sleep 4
+#    end
 # end
 
 
